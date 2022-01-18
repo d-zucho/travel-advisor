@@ -1,5 +1,4 @@
 // for all api cals
-
 import axios from 'axios'
 
 // const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary'
@@ -14,7 +13,6 @@ import axios from 'axios'
 //   // where api key lives VVVV
 //   headers: {
 //     'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
-//     'x-rapidapi-key': '9eb72c85fcmsh863162a99199a06p1dbd8ejsn4080fa86462e',
 //   },
 // }
 
@@ -38,8 +36,7 @@ export const getPlacesData = async (sw, ne) => {
         // where api key lives VVVV
         headers: {
           'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
-          'x-rapidapi-key':
-            '9eb72c85fcmsh863162a99199a06p1dbd8ejsn4080fa86462e',
+          'x-rapidapi-key': process.env.REACT_APP_RAPID_API_TRAVEL_API_KEY,
         },
       }
     )
