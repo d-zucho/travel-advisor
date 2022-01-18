@@ -12,7 +12,7 @@ import { CssBaseline, Grid } from '@material-ui/core'
 const App = () => {
   const [places, setPlaces] = useState([])
   const [coordinates, setCoordinates] = useState({})
-  const [bounds, setBounds] = useState(null)
+  const [bounds, setBounds] = useState({ sw: 0, ne: 0 })
   // bounds == 'boundaries' referring to window of map:
   // top right, bottom left, ....
 
@@ -29,11 +29,11 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    getPlacesData().then((data) => {
+    getPlacesData(bounds.sw, bounds.ne).then((data) => {
       console.log(data)
       setPlaces(data)
     })
-  }, [])
+  }, [bounds, coordinates])
 
   return (
     <>
