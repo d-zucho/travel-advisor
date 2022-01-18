@@ -12,7 +12,7 @@ import { CssBaseline, Grid } from '@material-ui/core'
 const App = () => {
   const [places, setPlaces] = useState([])
   const [coordinates, setCoordinates] = useState({})
-  const [bounds, setBounds] = useState({ sw: 0, ne: 0 })
+  const [bounds, setBounds] = useState({})
   // bounds == 'boundaries' referring to window of map:
   // top right, bottom left, ....
 
@@ -42,7 +42,7 @@ const App = () => {
       <Grid container spacing={3} style={{ width: '100%' }}>
         {/* Grid 1 */}
         <Grid item xs={12} md={4}>
-          <List />
+          <List places={places} />
         </Grid>
 
         {/* Grid 2 */}

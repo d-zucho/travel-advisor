@@ -13,23 +13,11 @@ import {
 } from '@material-ui/core'
 import useStyles from './styles'
 
-const List = () => {
+const List = ({ places }) => {
   const classes = useStyles()
 
   const [type, setType] = useState('restaurants')
   const [rating, setRating] = useState('')
-
-  const places = [
-    { name: 'Cool Place' },
-    { name: 'Outdoor Movies' },
-    { name: 'Mini Golf' },
-    { name: 'Cool Place' },
-    { name: 'Outdoor Movies' },
-    { name: 'Mini Golf' },
-    { name: 'Cool Place' },
-    { name: 'Outdoor Movies' },
-    { name: 'Mini Golf' },
-  ]
 
   return (
     <div className={classes.container}>
